@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="72">
+    <author>johnwayne1930</author>
+		<!-- <coauthor></coauthor> -->
+	<version>1.0.0.0</version>
+
+	<title>
+        <en>Pallet And Bale Warehouse Revamp</en>
+        <de>Paletten Und Ballen Lagerhalle Revamp</de>
+    </title>
+	
+	<description>
+<en><![CDATA[
+This warehouse can store and outsource pallets and bales.
+Production pallets, BigBag pallets, Bales (Straw, Hey, etc.), Cotton...
+
+Price: 50,000$
+Dayly upkeep: 60$ / day
+Capacity: 8,000,000 L
+The mod utilizes Production Revamp.
+
+Known bugs:
+On pallet storing there is a rounding error in the game sometimes which loses one liter (1L) of the product.
+This leads to a incomplete pallet once you outsource all of one type.
+]]></en>
+<de><![CDATA[
+Diese Lagerhalle ermöglicht das einlagern und auslagern von Paletten und Ballen.
+Produktionspaletten, BigBag Paletten, Rund- Quaderballen (Stroh, Heu, etc.), Baumwolle...
+
+Preis: 50.000€
+Unterhalt: 60 €/Tag
+Kapazität: 8.000.000 L
+Der Mod verwendet Production Revamp.
+
+Bekannte Probleme:
+Beim einlagern kann es vorkommen das durch einen Rundungsfehler im Spiel ein Liter (1L) vom Produkt verloren geht.
+Das kann beim kompletten auslagern eines Produkts zu einer nicht ganz kompletten Palette führen.
+]]></de>
+	</description>
+
+	<dependencies>
+		<dependency>FS22_A_ProductionRevamp</dependency>
+	</dependencies>	
+	
+	<extraSourceFiles>
+		<sourceFile filename="scripts/revamp_check.lua"/>
+	</extraSourceFiles>	
+
+	<fillTypes filename="fillTypes.xml"/>
+
+	<iconFilename>icon_palletWarehouse.dds</iconFilename>
+
+	<multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem  xmlFilename="palletWarehouse.xml"/>
+    </storeItems>
+
+    <l10n filenamePrefix="localization/l10n"/>
+
+</modDesc>

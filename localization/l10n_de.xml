@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<l10n>
+    <!-- <translationContributors></translationContributors> -->
+    <texts>
+        <text name="function_palletStorage" text="Lager für Paletten und Ballen" />
+        <text name="smallPalletStorage" text="Paletten und Ballen Lagerhalle" />
+    </texts>
+</l10n>

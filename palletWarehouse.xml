@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="FS22_A_ProductionRevamp.RevampSilo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_smallPalletStorage</name>
+        <functions>
+            <function>$l10n_function_palletStorage</function>
+        </functions>
+        <image>store_palletWarehouse.dds</image>
+        <price>50000</price>
+        <dailyUpkeep>60</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>placeable</species>
+        <category>silos</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>silos</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>warehouse01.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+	
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="smallImp" />
+        </sounds>
+    </placement>
+	
+	<aPalletSilo triggerNode="playerTrigger">
+        <palletSpawner node="palletSpawner">
+            <spawnPlaces>
+                <spawnPlace startNode="spawnSpace1start" />
+                <spawnPlace startNode="spawnSpace2start" />
+                <spawnPlace startNode="spawnSpace3start" />
+                <spawnPlace startNode="spawnSpace4start" />
+                <spawnPlace startNode="spawnSpace5start" />
+                <spawnPlace startNode="spawnSpace6start" />
+            </spawnPlaces>
+        </palletSpawner>
+    </aPalletSilo>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorArea1Start" widthNode="indoorArea1Width" heightNode="indoorArea1Height" />
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+	
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <silo>
+        <loadingStation storageRadius="0" fillTypeCategories="PRODUCT FARMSILO ADDITIONAL_STORAGE_GOODS ADDITIONAL_STORAGE_BALES" />
+
+        <unloadingStation supportsExtension="false" storageRadius="0">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypeCategories="PRODUCT FARMSILO ADDITIONAL_STORAGE_GOODS ADDITIONAL_STORAGE_BALES" aiNode="aiUnloadingNode">
+                <baleTrigger triggerNode="baleTrigger" deleteLitersPerSecond="8000"/>
+            </unloadTrigger>
+        </unloadingStation>
+
+        <storages>
+            <storage node="storage" fillTypeCategories="PRODUCT FARMSILO ADDITIONAL_STORAGE_GOODS ADDITIONAL_STORAGE_BALES" isExtension="false" capacity="8000000" />
+        </storages>
+    </silo>
+
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="markerLoading" teleportNode="markerLoading" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripesSpawn" />
+		<triggerMarker node="warningStripesUnload" />	
+        <triggerMarker node="playerTriggerMarker"   filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="true" />
+        <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
+        <triggerMarker node="spawnTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" adjustToGround="true" />
+    </triggerMarkers>
+
+    <i3dMappings>
+        <i3dMapping id="interiorSelfIllum" node="0>0|0|1|4" />
+        <i3dMapping id="interiorSelfIllumLOD" node="0>0|1|1|2" />
+        <i3dMapping id="warningStripesUnload" node="0>9|3" />
+        <i3dMapping id="warningStripesSpawn" node="0>8|3" />
+        <i3dMapping id="storage" node="0>" />
+        <i3dMapping id="infoTrigger" node="0>7" />
+        <i3dMapping id="exactFillRootNode" node="0>9|0" />
+        <i3dMapping id="baleTrigger" node="0>9|4"/>
+        <i3dMapping id="aiUnloadingNode" node="0>9|1" />
+        <i3dMapping id="unloadTriggerMarker" node="0>9|2" />
+        <i3dMapping id="markerLoading" node="0>10" />
+        <i3dMapping id="testArea1Start" node="0>11|0" />
+        <i3dMapping id="testArea1End" node="0>11|0|0" />
+        <i3dMapping id="clearArea1Start" node="0>4|0" />
+        <i3dMapping id="clearArea1Width" node="0>4|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>4|0|1" />        
+        <i3dMapping id="levelArea1Start" node="0>5|0" />
+        <i3dMapping id="levelArea1Width" node="0>5|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>5|0|1" />
+        <i3dMapping id="indoorArea1Start" node="0>6|0" />
+        <i3dMapping id="indoorArea1Width" node="0>6|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>6|0|1" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>3|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>3|0|0" />
+        <i3dMapping id="playerTrigger" node="0>10|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>10|1" />
+        <i3dMapping id="palletSpawner" node="0>8" />
+        <i3dMapping id="spawnSpace1start" node="0>8|0" />
+        <i3dMapping id="spawnSpace2start" node="0>8|1" />
+        <i3dMapping id="spawnSpace3start" node="0>8|2" />
+        <i3dMapping id="spawnSpace4start" node="0>8|5" />
+        <i3dMapping id="spawnSpace5start" node="0>8|6" />
+        <i3dMapping id="spawnSpace6start" node="0>8|7" />
+        <i3dMapping id="spawnTriggerMarker" node="0>8|4" />
+    </i3dMappings>
+</placeable>

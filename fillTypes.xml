@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">	
+    <fillTypeCategories>   
+        <fillTypeCategory name="ADDITIONAL_STORAGE_GOODS">MINERAL_FEED SILAGE_ADDITIVE HERBICIDE LIME LIQUIDFERTILIZER FERTILIZER OILSEEDRADISH SEEDS SUGARCANE POTATO GRAPE OLIVE STONE IRONORE WOOL HONEY</fillTypeCategory>	
+        <fillTypeCategory name="ADDITIONAL_STORAGE_BALES">STRAW DRYGRASS_WINDROW SILAGE GRASS_WINDROW COTTON WOODCHIPS</fillTypeCategory>	
+    </fillTypeCategories>    
+</map>

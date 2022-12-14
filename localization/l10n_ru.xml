@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<l10n>
+    <translationContributors>nagor</translationContributors>
+    <texts>
+        <text name="function_palletStorage" text="Хранилище поддонов и тюков" />
+        <text name="smallPalletStorage" text="Склад поддонов и тюков" />
+    </texts>
+</l10n>
