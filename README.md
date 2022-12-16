@@ -17,5 +17,5 @@ _%\Documents\My Games\FarmingSimulator2022\mods_ directory
 
 #### Installation ModHub:
 * download both [Production Revamp (Braeven)](https://farming-simulator.com/mod.php?mod_id=243542) and  
-[FS22_PalletWarehouseRevamp (johnwayne1930)]() from the ingame Modhub
+[FS22_PalletWarehouseRevamp (johnwayne1930)](https://farming-simulator.com/mod.php?mod_id=261233) from the ingame Modhub
 * activate both mods ingame
